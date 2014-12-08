@@ -33,3 +33,6 @@ phpunit.phar
 /index.php
 /index-test.php
 
+#apache .htaccess
+/.htaccess
+/backend/.htaccess
