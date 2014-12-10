@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6c890a2d60e12fa2c1ad935069de03e0",
+    "hash": "940de4b8b50d58dc5a87355269e85df9",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -99,6 +99,31 @@
                 "jquery",
                 "library"
             ]
+        },
+        {
+            "name": "bower-asset/jquery-ui",
+            "version": "1.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jqueryui.git",
+                "reference": "396781474d936959061271505f506b78398fe6a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/396781474d936959061271505f506b78398fe6a2",
+                "reference": "396781474d936959061271505f506b78398fe6a2",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.6"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "jquery-ui.js"
+                ],
+                "bower-asset-ignore": []
+            }
         },
         {
             "name": "bower-asset/jquery.inputmask",
@@ -419,6 +444,56 @@
             "time": "2014-12-10 04:51:06"
         },
         {
+            "name": "mdmsoft/yii2-admin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mdmsoft/yii2-admin.git",
+                "reference": "b6e17833d4a45ef5cab72519fc2a4b1d2e1f1dd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/b6e17833d4a45ef5cab72519fc2a4b1d2e1f1dd0",
+                "reference": "b6e17833d4a45ef5cab72519fc2a4b1d2e1f1dd0",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0",
+                "yiisoft/yii2-jui": "~2.0"
+            },
+            "suggest": {
+                "yiisoft/yii2-bootstrap": "Used when using layout 'left-menu', 'right-menu' or 'top-menu'"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mdm\\admin\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Misbahul Munir",
+                    "email": "misbahuldmunir@gmail.com"
+                }
+            ],
+            "description": "Auth manager for Yii2 ",
+            "keywords": [
+                "admin",
+                "auth",
+                "yii"
+            ],
+            "time": "2014-12-10 01:57:16"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "dev-master",
             "source": {
@@ -698,6 +773,52 @@
                 "yii2"
             ],
             "time": "2014-12-08 17:50:10"
+        },
+        {
+            "name": "yiisoft/yii2-jui",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-jui.git",
+                "reference": "ce599f755dd27ff4b84ede6652322d366607b184"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/ce599f755dd27ff4b84ede6652322d366607b184",
+                "reference": "ce599f755dd27ff4b84ede6652322d366607b184",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery-ui": "1.11.*@stable",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\jui\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com"
+                }
+            ],
+            "description": "The Jquery UI extension for the Yii framework",
+            "keywords": [
+                "jQuery UI",
+                "yii2"
+            ],
+            "time": "2014-12-07 16:46:05"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1052,7 +1173,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mdmsoft/yii2-admin": 20
+    },
     "prefer-stable": false,
     "platform": {
         "php": ">=5.4.0"

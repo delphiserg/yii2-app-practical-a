@@ -1,6 +1,9 @@
 <?php
 
 return [
+    /*'admin' => [
+        'class' => 'mdm\admin\Module',
+    ],*/
     'user' => [
         'class' => 'dektrium\user\Module',
         'components' => [

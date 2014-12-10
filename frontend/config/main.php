@@ -9,25 +9,13 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'components' => [
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
-        'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@dektrium/user/views' => '@app/views/user'
-                ],
-            ],
-        ],],
+    'components' => require 'components.php',
+    'modules' => require 'modules.php',
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            '*', // add or remove allowed actions to this list
+        ]
+    ],
     'params' => $params,
 ];
