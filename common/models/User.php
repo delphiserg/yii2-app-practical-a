@@ -2,12 +2,13 @@
 
 namespace common\models;
 
+use dektrium\user\models\User as BaseUser;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\db\AfterSaveEvent;
 use yii\web\IdentityInterface;
-use dektrium\user\models\User as BaseUser;
 
 /**
  * User model
@@ -26,5 +27,12 @@ use dektrium\user\models\User as BaseUser;
  */
 class User extends BaseUser
 {
-    
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        $this->trigger($insert ? self::EVENT_AFTER_INSERT : self::EVENT_AFTER_UPDATE, new AfterSaveEvent([
+            'changedAttributes' => $changedAttributes
+        ]));
+    }
+
 }
