@@ -1,12 +1,13 @@
 <?php
 
+namespace common\models;
+
+use dektrium\user\models\Profile as BaseProfile;
+use Yii;
+
 /*
  * 
  */
-
-namespace common\models;
-
-use dektrium\user\helpers\ModuleTrait;
 
 /**
  * This is the model class for table "profile".
@@ -15,17 +16,8 @@ use dektrium\user\helpers\ModuleTrait;
  * @property string  $name
  *
  */
-class Profile extends \dektrium\user\models\Profile
+class Profile extends BaseProfile
 {
-    use ModuleTrait;
-
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%profile}}';
-    }
 
     /**
      * @inheritdoc
@@ -43,7 +35,7 @@ class Profile extends \dektrium\user\models\Profile
     public function attributeLabels()
     {
         return [
-            'name' => \Yii::t('user', 'Name'),
+            'name' => Yii::t('user', 'Name'),
         ];
     }
 
@@ -52,18 +44,6 @@ class Profile extends \dektrium\user\models\Profile
      */
     public function beforeSave($insert)
     {
-        if (parent::beforeSave($insert)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * @return \yii\db\ActiveQueryInterface
-     */
-    public function getUser()
-    {
-        return $this->hasOne($this->module->manager->userClass, ['id' => 'user_id']);
+        return true;
     }
 }
