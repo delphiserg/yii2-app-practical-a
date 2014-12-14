@@ -22,7 +22,10 @@
         "yiisoft/yii2-swiftmailer": "*",
         "dektrium/yii2-user": "*",
         "jamband/yii2-schemadump": "*",
-        "mdmsoft/yii2-admin": "dev-master"
+        "mdmsoft/yii2-admin": "dev-master",
+        "dmstr/yii2-adminlte-asset": "*",
+        "warrence/yii2-kartikgii": "dev-master",
+        "kartik-v/yii2-mpdf": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -11,11 +11,5 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => require 'components.php',
     'modules' => require 'modules.php',
-    'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
-        'allowActions' => [
-            '*', // add or remove allowed actions to this list
-        ]
-    ],
     'params' => $params,
 ];

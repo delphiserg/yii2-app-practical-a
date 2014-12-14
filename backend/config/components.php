@@ -17,11 +17,4 @@ return [
         'identityClass' => 'common\models\User',
         'enableAutoLogin' => true,
     ],
-    'view' => [
-        'theme' => [
-            'pathMap' => [
-                '@dektrium/user/views' => '@app/views/user'
-            ],
-        ],
-    ],
 ];

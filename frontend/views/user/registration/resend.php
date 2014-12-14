@@ -10,14 +10,16 @@
  */
 
 use yii\helpers\Html;
+use yii\web\View;
 use yii\widgets\ActiveForm;
 
 /**
- * @var yii\web\View $this
- * @var yii\widgets\ActiveForm $form
+ * @var View $this
+ * @var ActiveForm $form
  * @var dektrium\user\forms\Resend $model
  */
 
+Yii::$app->layoutPath = '@frontend/views/layouts';
 $this->title = Yii::t('user', 'Request new confirmation message');
 $this->params['breadcrumbs'][] = $this->title;
 ?>

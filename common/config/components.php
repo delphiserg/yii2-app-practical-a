@@ -10,5 +10,14 @@ return [
     'urlManager' => [
         'enablePrettyUrl' => true,
         'showScriptName' => false,
+        'rules' => [
+        ],
+    ],
+    'view' => [
+        'theme' => [
+            'pathMap' => [
+                '@dektrium/user/views' => '@frontend/views/user'
+            ],
+        ],
     ],
 ];
